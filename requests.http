@@ -1,0 +1,123 @@
+### 1. Register akun baru
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "email": "alya.tif20@example.com",
+  "password": "AlyaTugas20!2026"
+}
+
+### 2. Register dengan email yang sama (uji duplikat)
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "email": "alya.tif20@example.com",
+  "password": "AlyaTugas20!2026"
+}
+
+### 3. Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "alya.tif20@example.com",
+  "password": "AlyaTugas20!2026"
+}
+
+### 4. Melihat daftar buku (endpoint publik)
+GET http://localhost:3000/books
+
+### 5. Melihat daftar peminjaman (endpoint publik)
+GET http://localhost:3000/loans
+
+### 6. Melihat profil tanpa token
+GET http://localhost:3000/auth/saya
+
+### 7. Menambahkan buku tanpa token
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+  "title": "Buku Uji Tanpa Token",
+  "author": "Alya Rasyida",
+  "isbn": "9786230000001",
+  "year": 2026,
+  "price": 75000,
+  "stock": 10,
+  "publishedAt": "2026-01-01"
+}
+
+### 8. Menambahkan buku dengan token
+POST http://localhost:3000/books
+Content-Type: application/json
+Authorization: Bearer TOKEN_LOGIN
+
+{
+  "title": "Buku Pengujian Autentikasi",
+  "author": "Alya Rasyida",
+  "isbn": "9786230000003",
+  "year": 2026,
+  "price": 75000,
+  "stock": 10,
+  "publishedAt": "2026-01-01"
+}
+
+### 9. Melihat profil dengan token
+GET http://localhost:3000/auth/saya
+Authorization: Bearer TOKEN_LOGIN
+
+### 10. Menambahkan peminjaman tanpa token
+POST http://localhost:3000/loans
+Content-Type: application/json
+
+{
+  "bookId": 1,
+  "borrowerName": "Alya",
+  "quantity": 1
+}
+
+### 11. Menambahkan peminjaman dengan token
+POST http://localhost:3000/loans
+Content-Type: application/json
+Authorization: Bearer TOKEN_LOGIN
+
+{
+  "bookId": 1,
+  "borrowerName": "Alya",
+  "quantity": 1
+}
+
+### 12. Mengubah data buku dengan token
+PUT http://localhost:3000/books/1
+Content-Type: application/json
+Authorization: Bearer TOKEN_LOGIN
+
+{
+  "title": "Laskar Pelangi Edisi Revisi",
+  "author": "Andrea Hirata",
+  "isbn": "9786022912792",
+  "year": 2005,
+  "price": 90000,
+  "stock": 13,
+  "publishedAt": "2005-01-01"
+}
+
+### 13. Menghapus buku dengan token
+DELETE http://localhost:3000/books/8
+Authorization: Bearer TOKEN_LOGIN
+### 14. Menguji token JWT palsu
+GET http://localhost:3000/auth/saya
+Authorization: Bearer TOKEN_PALSU_HASIL_UJI
+### 15. Menguji token JWT kedaluwarsa
+GET http://localhost:3000/auth/saya
+Authorization: Bearer TOKEN_KEDALUWARSA_HASIL_UJI
+### 16. Menguji validasi register
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "email": "email-tidak-valid",
+  "password": "123"
+}
+
