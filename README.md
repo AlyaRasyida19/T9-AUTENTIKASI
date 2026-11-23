@@ -211,27 +211,27 @@ Pengujian dilakukan menggunakan file `requests.http` pada Visual Studio Code. Be
 
 ### 1. Pengujian Autentikasi
 
-- [Register Berhasil](screenshot/01-register-berhasil.png): Register akun baru berhasil dengan status `201`.
-- [Register Email Duplikat](screenshot/02-register-email-duplikat.png): Register menggunakan email yang sudah terdaftar menghasilkan status `409`.
-- [Login Berhasil](screenshot/03-login-berhasil.png): Login berhasil dan menghasilkan token JWT.
-- [Profil Tanpa Token](screenshot/04-profil-tanpa-token.png): Mengakses profil tanpa token ditolak dengan status `401`.
-- [Profil Dengan Token](screenshot/05-profil-dengan-token.png): Mengakses profil dengan token valid berhasil.
-- [Tabel Users Password Hash](screenshot/08-tabel-users-password-hash.png): Menampilkan tabel users dengan password yang sudah di-hash menggunakan bcrypt.
-- [Token Palsu](screenshot/11-token-palsu.png): Token yang payload-nya dimanipulasi ditolak oleh server.
-- [Token Kedaluwarsa](screenshot/12-token-kadaluarsa.png): Token yang sudah melewati masa berlaku ditolak oleh server.
-- [Validasi Register](screenshot/15-validasi-register-422.png): Mengirim data register yang tidak sesuai aturan validasi menghasilkan status `422`.
+- ![Register Berhasil](screenshot/01-register-berhasil.png): Register akun baru berhasil dengan status `201`.
+- ![Register Email Duplikat](screenshot/02-register-email-duplikat.png): Register menggunakan email yang sudah terdaftar menghasilkan status `409`.
+- ![Login Berhasil](screenshot/03-login-berhasil.png): Login berhasil dan menghasilkan token JWT.
+- ![Profil Tanpa Token](screenshot/04-profil-tanpa-token.png): Mengakses profil tanpa token ditolak dengan status `401`.
+- ![Profil Dengan Token](screenshot/05-profil-dengan-token.png): Mengakses profil dengan token valid berhasil.
+- ![Tabel Users Password Hash](screenshot/08-tabel-users-password-hash.png): Menampilkan tabel users dengan password yang sudah di-hash menggunakan bcrypt.
+- ![Token Palsu](screenshot/11-token-palsu.png): Token yang payload-nya dimanipulasi ditolak oleh server.
+- ![Token Kedaluwarsa](screenshot/12-token-kadaluarsa.png): Token yang sudah melewati masa berlaku ditolak oleh server.
+- ![Validasi Register](screenshot/15-validasi-register-422.png): Mengirim data register yang tidak sesuai aturan validasi menghasilkan status `422`.
 
 ### 2. Pengujian Pengelolaan Buku
 
-- [Tambah Buku Tanpa Token](screenshot/06-tambah-buku-tanpa-token.png): Menambahkan buku tanpa token ditolak.
-- [Tambah Buku Dengan Token](screenshot/07-tambah-buku-dengan-token.png): Menambahkan buku menggunakan token berhasil.
-- [Ubah Buku Dengan Token](screenshot/13-ubah-buku-dengan-token.png): Mengubah data buku menggunakan token berhasil.
-- [Hapus Buku Dengan Token](screenshot/14-hapus-buku-dengan-token.png): Menghapus data buku menggunakan token berhasil.
+- ![Tambah Buku Tanpa Token](screenshot/06-tambah-buku-tanpa-token.png): Menambahkan buku tanpa token ditolak.
+- ![Tambah Buku Dengan Token](screenshot/07-tambah-buku-dengan-token.png): Menambahkan buku menggunakan token berhasil.
+- ![Ubah Buku Dengan Token](screenshot/13-ubah-buku-dengan-token.png): Mengubah data buku menggunakan token berhasil.
+- ![Hapus Buku Dengan Token](screenshot/14-hapus-buku-dengan-token.png): Menghapus data buku menggunakan token berhasil.
 
 ### 3. Pengujian Peminjaman Buku
 
-- [Peminjaman Tanpa Token](screenshot/09-peminjaman-tanpa-token.png): Menambahkan peminjaman tanpa token ditolak.
-- [Peminjaman Dengan Token](screenshot/10-peminjaman-dengan-token.png): Menambahkan peminjaman menggunakan token berhasil.
+- ![Peminjaman Tanpa Token](screenshot/09-peminjaman-tanpa-token.png): Menambahkan peminjaman tanpa token ditolak.
+- ![Peminjaman Dengan Token](screenshot/10-peminjaman-dengan-token.png): Menambahkan peminjaman menggunakan token berhasil.
 
 ---
 
